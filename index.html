@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임 개발자 포트폴리오</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- 분리된 CSS 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 font-bold text-xl tracking-tight bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+                    DevPortfolio.
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-indigo-400 transition px-3 py-2 rounded-md text-sm font-medium">홈</a>
+                        <a href="#project" class="hover:text-indigo-400 transition px-3 py-2 rounded-md text-sm font-medium">프로젝트</a>
+                        <a href="#code-review" class="hover:text-indigo-400 transition px-3 py-2 rounded-md text-sm font-medium">코드 리뷰</a>
+                        <a href="#contact" class="hover:text-indigo-400 transition px-3 py-2 rounded-md text-sm font-medium">연락처</a>
+                    </div>
+                </div>
+                <div class="flex">
+                    <a href="https://github.com/haegolas/ptp" target="_blank" class="text-slate-300 hover:text-white transition">
+                        <i class="fa-brands fa-github text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero & Slider Section -->
+        <section id="home" class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+                        <span class="block">끝없는 상상력을 현실로 만드는</span>
+                        <span class="block text-indigo-500">게임 프로그래머 포트폴리오</span>
+                    </h1>
+                    <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-400">
+                        유저에게 최고의 경험을 선사하기 위해 끊임없이 코드를 최적화하고 고민합니다.
+                    </p>
+                </div>
+
+                <!-- Slider Container -->
+                <div class="relative w-full max-w-5xl mx-auto aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl shadow-indigo-500/20 border border-slate-700">
+                    
+                    <!-- Slide 1 (Image) -->
+                    <div class="slide active">
+                        <img src="https://placehold.co/1280x720/1e293b/6366f1?text=Game+Screenshot+1" alt="게임 스크린샷 1" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-left">
+                            <h3 class="text-xl font-bold text-white">메인 타이틀 화면</h3>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 (Image) -->
+                    <div class="slide">
+                        <img src="https://placehold.co/1280x720/1e293b/06b6d4?text=Game+Screenshot+2" alt="게임 스크린샷 2" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-left">
+                            <h3 class="text-xl font-bold text-white">인게임 전투 시스템</h3>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 (Image) -->
+                    <div class="slide">
+                        <img src="https://placehold.co/1280x720/1e293b/10b981?text=Game+Screenshot+3" alt="게임 스크린샷 3" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-left">
+                            <h3 class="text-xl font-bold text-white">인벤토리 UI</h3>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 (Video) -->
+                    <div class="slide">
+                        <!-- Placeholder video from standard sample url -->
+                        <video id="slider-video" class="w-full h-full object-cover" controls muted loop>
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            브라우저가 동영상을 지원하지 않습니다.
+                        </video>
+                        <div class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse flex items-center gap-2">
+                            <i class="fa-solid fa-video"></i> Gameplay
+                        </div>
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-indigo-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition z-20 focus:outline-none backdrop-blur-sm">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-indigo-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition z-20 focus:outline-none backdrop-blur-sm">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Indicators -->
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+                        <button onclick="goToSlide(0)" class="indicator w-3 h-3 rounded-full bg-white transition"></button>
+                        <button onclick="goToSlide(1)" class="indicator w-3 h-3 rounded-full bg-white/50 transition"></button>
+                        <button onclick="goToSlide(2)" class="indicator w-3 h-3 rounded-full bg-white/50 transition"></button>
+                        <button onclick="goToSlide(3)" class="indicator w-3 h-3 rounded-full bg-white/50 transition"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Details Section -->
+        <section id="project" class="py-16 bg-slate-800/50 border-y border-slate-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                    
+                    <!-- Left: Info & Tags -->
+                    <div class="lg:col-span-1 space-y-8">
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-2">Project: <span class="text-indigo-400">Neon Knight</span></h2>
+                            <p class="text-slate-400">2D 횡스크롤 액션 플랫포머 게임</p>
+                        </div>
+
+                        <div class="space-y-4 bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                            <!-- Info Items -->
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-400 font-medium">개발 언어</span>
+                                <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm font-semibold border border-blue-500/30">C#</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-400 font-medium">프레임워크</span>
+                                <span class="bg-zinc-500/20 text-zinc-300 px-3 py-1 rounded-full text-sm font-semibold border border-zinc-500/30">Unity 2022.3</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-400 font-medium">개발 기간</span>
+                                <span class="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-sm font-semibold border border-emerald-500/30">2개월</span>
+                            </div>
+                        </div>
+
+                        <a href="https://github.com/haegolas/ptp" target="_blank" class="w-full group flex items-center justify-center gap-3 bg-slate-100 hover:bg-white text-slate-900 font-bold text-lg py-4 px-6 rounded-xl transition duration-300 shadow-lg hover:shadow-white/20">
+                            <i class="fa-brands fa-github text-2xl group-hover:scale-110 transition-transform"></i>
+                            GitHub 저장소 보러가기
+                        </a>
+                    </div>
+
+                    <!-- Right: Notes & Features -->
+                    <div class="lg:col-span-2 bg-slate-800 p-8 rounded-2xl shadow-xl border border-slate-700 h-full">
+                        <h3 class="text-2xl font-bold mb-6 flex items-center gap-3 text-white">
+                            <i class="fa-solid fa-list-check text-indigo-400"></i>
+                            기타 특기사항 및 주요 구현 기능
+                        </h3>
+                        
+                        <div class="space-y-6 text-slate-300 leading-relaxed">
+                            <p>
+                                기획부터 개발까지 1인 개발로 진행한 액션 플랫포머 게임입니다. 플레이어의 조작감과 타격감을 극대화하기 위해 FSM(Finite State Machine) 패턴을 적용하여 캐릭터 상태를 관리했습니다.
+                            </p>
+                            
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                                    <div>
+                                        <strong class="text-white">FSM(유한 상태 기계) 기반 캐릭터 제어:</strong>
+                                        <p class="text-sm mt-1 text-slate-400">Idle, Run, Jump, Attack 등 복잡한 애니메이션과 상태 전환을 깔끔하게 분리하여 버그를 줄이고 확장성을 높였습니다.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                                    <div>
+                                        <strong class="text-white">오브젝트 풀링(Object Pooling) 적용:</strong>
+                                        <p class="text-sm mt-1 text-slate-400">투사체(총알, 마법) 및 파티클 이펙트 생성/삭제 시 발생하는 가비지 컬렉터(GC) 스파이크를 방지하여 프레임 드랍을 최적화했습니다.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                                    <div>
+                                        <strong class="text-white">Scriptable Object 활용 데이터 관리:</strong>
+                                        <p class="text-sm mt-1 text-slate-400">몬스터 스탯, 아이템 정보 등을 Scriptable Object로 분리하여 기획자 친화적인 데이터 구조를 설계했습니다.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Review Section -->
+        <section id="code-review" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">주요 코드 리뷰</h2>
+                    <p class="mt-4 text-slate-400">프로젝트의 핵심 로직과 객체지향적 설계를 고민한 흔적입니다.</p>
+                </div>
+
+                <div class="bg-[#1e1e1e] rounded-xl shadow-2xl border border-slate-700 overflow-hidden flex flex-col md:flex-row">
+                    
+                    <!-- Left: Code Explanation -->
+                    <div class="md:w-1/3 bg-slate-800 p-8 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-700">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-md text-sm font-semibold mb-4 w-max">
+                            <i class="fa-solid fa-code"></i> FSM State Pattern
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">캐릭터 상태 패턴 구현</h3>
+                        <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                            거대한 <code>switch-case</code> 문을 피하기 위해 상태 패턴을 적용했습니다. 
+                            각 상태를 클래스로 캡슐화하여 새로운 액션(예: 대시, 구르기)을 추가할 때 기존 코드를 수정하지 않고 
+                            새로운 클래스만 추가하면 되도록 <b>OCP(개방-폐쇄 원칙)</b>를 준수했습니다.
+                        </p>
+                        <div class="text-xs text-slate-500 bg-slate-900/50 p-3 rounded flex items-center gap-2">
+                            <i class="fa-solid fa-lightbulb text-yellow-500"></i>
+                            유지보수성이 크게 향상되었습니다.
+                        </div>
+                    </div>
+
+                    <!-- Right: Code Block -->
+                    <div class="md:w-2/3 p-6 bg-[#1e1e1e] overflow-x-auto relative group">
+                        <!-- Mac OS style window buttons -->
+                        <div class="flex gap-2 absolute top-4 left-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="text-slate-400 text-xs text-center font-mono mb-4">PlayerStateMachine.cs</div>
+                        
+                        <pre class="font-mono text-sm leading-relaxed text-slate-300"><code class="language-csharp"><span class="text-pink-400">public interface</span> <span class="text-emerald-300">IState</span>
+{
+    <span class="text-pink-400">void</span> <span class="text-blue-300">Enter</span>();
+    <span class="text-pink-400">void</span> <span class="text-blue-300">Execute</span>();
+    <span class="text-pink-400">void</span> <span class="text-blue-300">Exit</span>();
+}
+
+<span class="text-pink-400">public class</span> <span class="text-emerald-300">PlayerStateMachine</span> : <span class="text-emerald-300">MonoBehaviour</span>
+{
+    <span class="text-pink-400">private</span> <span class="text-emerald-300">IState</span> currentState;
+
+    <span class="text-pink-400">public void</span> <span class="text-blue-300">ChangeState</span>(<span class="text-emerald-300">IState</span> newState)
+    {
+        <span class="text-pink-400">if</span> (currentState != <span class="text-pink-400">null</span>)
+            currentState.<span class="text-blue-300">Exit</span>();
+
+        currentState = newState;
+        currentState.<span class="text-blue-300">Enter</span>();
+    }
+
+    <span class="text-pink-400">private void</span> <span class="text-blue-300">Update</span>()
+    {
+        <span class="text-pink-400">if</span> (currentState != <span class="text-pink-400">null</span>)
+            currentState.<span class="text-blue-300">Execute</span>();
+    }
+}</code></pre>
+                        
+                        <!-- Copy Button (Visible on hover) -->
+                        <button onclick="copyCode()" class="absolute top-4 right-4 bg-slate-700 hover:bg-slate-600 text-white px-3 py-1.5 rounded-md text-xs font-medium transition opacity-0 group-hover:opacity-100 flex items-center gap-2">
+                            <i class="fa-regular fa-copy"></i> <span id="copy-text">Copy</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer & Contact Section -->
+    <footer id="contact" class="bg-slate-900 border-t border-slate-800 pt-16 pb-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-6">Contact Me</h2>
+                    <p class="text-slate-400 mb-8 leading-relaxed">
+                        게임 개발에 대한 열정과 아이디어를 나눌 기회를 항상 기다리고 있습니다. <br class="hidden sm:block">
+                        채용 문의나 협업 제안이 있으시다면 언제든 편하게 연락해 주세요!
+                    </p>
+                    <div class="space-y-5">
+                        <div class="flex items-center gap-5">
+                            <div class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-indigo-400 text-lg shadow-inner">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Email</p>
+                                <a href="mailto:gamedev@example.com" class="text-lg text-slate-200 hover:text-indigo-400 transition font-medium">gamedev@example.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-5">
+                            <div class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-indigo-400 text-lg shadow-inner">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Phone</p>
+                                <a href="tel:010-1234-5678" class="text-lg text-slate-200 hover:text-indigo-400 transition font-medium">010-1234-5678</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex flex-col md:items-end justify-center">
+                    <h3 class="text-xl font-bold text-white mb-6">Social Profiles</h3>
+                    <div class="flex gap-4">
+                        <a href="https://github.com" target="_blank" class="w-14 h-14 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:bg-slate-700 hover:text-white transition-all hover:scale-110 text-2xl shadow-lg">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="#" class="w-14 h-14 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all hover:scale-110 text-2xl shadow-lg">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-14 h-14 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:bg-indigo-600 hover:text-white transition-all hover:scale-110 text-2xl shadow-lg">
+                            <i class="fa-brands fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-slate-800 pt-8 text-center">
+                <p class="text-slate-500 font-medium mb-2">© 2026 Game Developer Portfolio. All Rights Reserved.</p>
+                <p class="text-sm text-slate-600">Built with HTML, Tailwind CSS & JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 분리된 JS 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>
